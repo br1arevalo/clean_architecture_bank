@@ -5,14 +5,14 @@ import "errors"
 type Product struct {
 	ID    int64
 	Name  string
-	Price float32
+	Price float64
 }
 
-func NewProduct(name string) *Product {
+func NewProduct(name string, price float64) *Product {
 	return &Product{
 		ID:    0,
 		Name:  name,
-		Price: 0.0,
+		Price: price,
 	}
 }
 

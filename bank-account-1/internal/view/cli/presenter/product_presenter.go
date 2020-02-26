@@ -18,8 +18,8 @@ func NewProductPresenter() *ProductPresenter {
 	return &ProductPresenter{useCase: useCase}
 }
 
-func (p *ProductPresenter) CreateProduct(name string) error {
-	return p.useCase.CreateProduct(name)
+func (p *ProductPresenter) CreateProduct(name string, price float64) error {
+	return p.useCase.CreateProduct(name, price)
 }
 
 func (p *ProductPresenter) GetAll() []*model.Product {

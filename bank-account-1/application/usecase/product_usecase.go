@@ -13,8 +13,8 @@ func NewProductUseCase(productRepository repository.IProductRepository) *Product
 	return &ProductUseCase{productRepository}
 }
 
-func (p *ProductUseCase) CreateProduct(name string) error {
-	product := model.NewProduct(name)
+func (p *ProductUseCase) CreateProduct(name string, price float64) error {
+	product := model.NewProduct(name, price)
 	if err := product.IsValid(); err != nil {
 		return err
 	}

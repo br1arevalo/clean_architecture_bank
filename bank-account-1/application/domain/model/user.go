@@ -3,15 +3,15 @@ package model
 import "errors"
 
 type User struct {
-	ID int64
-	Name string
+	ID      int64
+	Name    string
 	Balance float32
 }
 
 func NewUser(name string) *User {
 	return &User{
-		ID: 0,
-		Name: name,
+		ID:      0,
+		Name:    name,
 		Balance: 0.0,
 	}
 }
@@ -25,5 +25,3 @@ func (u *User) IsValid() error {
 
 	return nil
 }
-
-
